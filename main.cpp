@@ -1,18 +1,13 @@
-# ProcessingTimer
-c++用処理時間計測class  
-単位以下は切り捨て
-
-## example
-```c++
 #include"processingtimer.hpp"
 
 int main()
 {
     ProcessingTimer timer;
     timer.Start();
-    /*
-
-    */
+    for (int i = 0; i < 1000000000; i++)
+    {
+        i++;
+    }
     timer.Stop();
     timer.PrintTime(ProcessingTimer::Unit::SECONDS);
     timer.PrintTime(ProcessingTimer::Unit::MILLI_SECONDS);
@@ -20,4 +15,3 @@ int main()
 
     return 0;
 }
-```
